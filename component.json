@@ -1,0 +1,12 @@
+{
+  "name" : "aemitter",
+  "repo": "matthewmueller/aemitter",
+  "version" : "0.0.1",
+  "keywords" : ["emitter", "async"],
+  "description" : "asynchronous emitter",
+  "scripts" : [
+    "index.js"
+  ],
+  "dependencies" : {},
+  "license" : "MIT"
+}
