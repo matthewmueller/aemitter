@@ -2,7 +2,7 @@ var Emitter = require('..'),
     should = require('should');
 
 /**
- * Tests pulled from github.com/component/emitter
+ * Top tests pulled from github.com/component/emitter
  */
 
 function Custom() {
