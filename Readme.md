@@ -1,4 +1,4 @@
-# Æmitter
+# æmitter
 
 An asynchronous event emitter for node.js and the browser. Heavily inspired by [component/emitter](https://github.com/component/emitter).
 
@@ -6,11 +6,11 @@ An asynchronous event emitter for node.js and the browser. Heavily inspired by [
 
 Using component:
 
-  component install matthewmueller/aemitter
+    component install matthewmueller/aemitter
 
 Using node.js:
 
-  npm install aemitter
+    npm install aemitter
 
 ## Example
 
@@ -84,8 +84,8 @@ user.emit('save', data, ''); // will also work as expected
 
 ## Test
 
-  npm install .
-  mocha test
+    npm install .
+    mocha test
 
 ## License
 
