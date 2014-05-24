@@ -130,6 +130,21 @@ describe('Emitter', function(){
     });
   });
 
+  describe('.emit(event)', function(){
+    it('should set the context of the callback', function(){
+      var emitter = new Emitter;
+      var context;
+
+      function one() { context = this; }
+
+      emitter.on('foo', one);
+
+      emitter.emit('foo');
+
+      context.should.eql(emitter);
+    });
+  });
+
   describe('.listeners(event)', function(){
     describe('when handlers are present', function(){
       it('should return an array of callbacks', function(){

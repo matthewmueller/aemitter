@@ -117,7 +117,8 @@ Emitter.prototype.emit = function(event){
   var args = [].slice.call(arguments, 1),
       last = args[args.length-1],
       callbacks = this._callbacks[event],
-      pending = 0;
+      pending = 0,
+      context = this;
 
   if (!callbacks) return this;
 
@@ -131,7 +132,7 @@ Emitter.prototype.emit = function(event){
   callbacks = callbacks.slice(0);
   callbacks.forEach(function(callback) {
     var len = callback.len || callback.length;
-    callback.apply(this, args.concat(next));
+    callback.apply(context, args.concat(next));
     // If the callback length is greater than the argument length, assume async
     if(len > args.length) pending++;
   });
